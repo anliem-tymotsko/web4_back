@@ -5,7 +5,9 @@ var userSchema = mongoose.Schema({
     lastname: {type:String, required:true},
     email: {type:String, required:true},
     password: {type:String, required:true},
-    role: {type:String, require:true}
+    role: {type:String, require:true},
+    access:{type:Boolean, require:true},
+    subjects:{type:Object, require:true},
 })
 
-var User = module.exports = mongoose.model('User', userSchema);
+var User = module.exports = mongoose.model('User', userSchema, "users");
